@@ -15,9 +15,12 @@ public class MoodAnalyzerTest {
     }
     @Test
     public void analyzeTestMessageWithHandlingException(){
+       try{
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-       String mood = moodAnalyzer.analyzeMood(null);
+        String mood = moodAnalyzer.validate(null);
         System.out.println(mood);
-    }
-
+    } catch (Exception e){
+            System.out.println("Exception occurred is : "+e);
+        }
+     }
 }
