@@ -2,7 +2,6 @@ package com.bridgelabz;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 public class MoodAnalyzerTest {
      @Test
     public void analyzeSadMessageTestWithConstructor(){
@@ -15,9 +14,14 @@ public class MoodAnalyzerTest {
             System.out.println("Exception occurred in program : "+e);
         }
     }
-
     @Test
-   public void testUsingCustomExceptions(){
+    public void analyzeTestMessageWithHandlingException(){
+       try{
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-    }
+        String mood = moodAnalyzer.validate("");
+        System.out.println(mood);
+    } catch (MoodAnalysisException e){
+            System.out.println("Exception occurred is : "+e);
+        }
+     }
 }
