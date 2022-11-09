@@ -14,6 +14,7 @@ public class MoodAnalyzerTest {
             System.out.println("Exception occurred in program : "+e);
         }
     }
+
     @Test
     public void analyzeTestMessageWithHandlingException(){
        try{
