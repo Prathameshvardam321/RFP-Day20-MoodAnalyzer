@@ -5,7 +5,7 @@ import org.junit.Test;
 public class MoodAnalyzerTest {
      @Test
     public void analyzeSadMessageTestWithConstructor(){
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("");
         try {
         String mood = moodAnalyzer.analyzeMoodWithConstructor();
             Assert.assertEquals("SAD", mood);
@@ -17,9 +17,9 @@ public class MoodAnalyzerTest {
     public void analyzeTestMessageWithHandlingException(){
        try{
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-        String mood = moodAnalyzer.validate(null);
+        String mood = moodAnalyzer.validate("");
         System.out.println(mood);
-    } catch (Exception e){
+    } catch (MoodAnalysisException e){
             System.out.println("Exception occurred is : "+e);
         }
      }

@@ -40,21 +40,17 @@ public class MoodAnalyzer {
     }
     public String validate(String message) throws MoodAnalysisException{
         try {
-
-
             if (message.contains("I am in Sad Mood")) {
                 return "SAD";
             }
             if (message.contains("I am in Any Mood")) {
                 return "HAPPY";
             }
-            if (message.contains(null)) {
-                throw new MoodAnalysisException("Entered null or empty string value.");
-            } else {
-                throw new MoodAnalysisException("Entered null or empty string value.");
-            }
+
+            return "";
+
         }catch (Exception e){
-            throw new MoodAnalysisException("Entered null value");
+            throw new MoodAnalysisException("Entered null value or empty string");
         }
     }
 }
