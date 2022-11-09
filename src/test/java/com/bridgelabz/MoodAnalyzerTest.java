@@ -2,7 +2,6 @@ package com.bridgelabz;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 public class MoodAnalyzerTest {
     @Test
     public void analyzeSadMessageTest(){

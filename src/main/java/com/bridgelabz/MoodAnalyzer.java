@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+
 public class MoodAnalyzer {
     String message;
     public MoodAnalyzer(){
@@ -24,6 +25,7 @@ public class MoodAnalyzer {
             return "HAPPY";
         }
         else
+
             return null;
     }
 }
