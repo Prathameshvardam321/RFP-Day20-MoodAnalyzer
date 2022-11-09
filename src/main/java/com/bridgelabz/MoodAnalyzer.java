@@ -6,26 +6,32 @@ public class MoodAnalyzer {
     public MoodAnalyzer(){
 
     }
+
     public MoodAnalyzer(String message){
         this.message = message;
     }
     public String analyzeMood(String message){
-        if (message.contains("I am in Sad Mood")){
-        return "SAD";
-        }else if(message.contains("I am in Any Mood")){
+        try{
+            if (message.contains("I am in Sad Mood")){
+                return "SAD";
+            }
+            if(message.contains("I am in Any Mood")){
+                return "HAPPY";
+            }
+
+        }catch (Exception e){
             return "HAPPY";
         }
-        else
-            return null;
+        return "";
         }
     public String analyzeMoodWithConstructor(){
+
         if (message.contains("I am in Sad Mood")){
             return "SAD";
-        }else if(message.contains("I am in Any Mood")){
+        }
+        if(message.contains("I am in Any Mood")){
             return "HAPPY";
         }
-        else
-
-            return null;
+        return "";
     }
 }
